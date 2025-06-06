@@ -42,10 +42,12 @@ jobs:
           
           ### PULL REQUEST COMMENTS: Uncomment below to enable
           polaris_prComment_enabled: true 
+
           github_token: ${{ secrets.PAT_GITHUB }} # Required when PR comments is enabled is enabled
 
           ### Adding diagnostics to debug pull request experiment
           include_diagnostics: true
+
 
           ### SARIF report parameters
           #polaris_reports_sarif_create: true
