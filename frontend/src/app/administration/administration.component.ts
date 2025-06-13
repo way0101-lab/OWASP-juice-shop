@@ -66,6 +66,7 @@ export class AdministrationComponent implements OnInit {
     })
   }
 
+  
   findAllFeedbacks () {
     this.feedbackService.find().subscribe((feedbacks) => {
       this.feedbackDataSource = feedbacks
