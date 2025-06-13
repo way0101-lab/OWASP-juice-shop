@@ -55,7 +55,7 @@ export class AdministrationComponent implements OnInit {
       this.userDataSourceHidden = users
       for (const user of this.userDataSource) {
         user.email = this.sanitizer.bypassSecurityTrustHtml(`<span class="${this.doesUserHaveAnActiveSession(user) ? 'confirmation' : 'error'}">${user.email}</span>`)
-        user.password = this.sanitizer.bypassSecurityTrustHtml(`<span class="${this.doesUserHaveAnActiveSession(user) ? 'confirmation' : 'error'}">${user.email}</span>`)
+        user.password = this.sanitizer.bypassSecurityTrustHtml(`<span class="${this.doesUserHaveAnActiveSession(user) ? 'confirmation' : 'error'}">${user.password}</span>`)
       }
       this.userDataSource = new MatTableDataSource(this.userDataSource)
       this.userDataSource.paginator = this.paginatorUsers
@@ -66,6 +66,22 @@ export class AdministrationComponent implements OnInit {
     })
   }
 
+  findAllUsersCopy () {
+    this.userService.find().subscribe((users) => {
+      this.userDataSource = users
+      this.userDataSourceHidden = users
+      for (const user of this.userDataSource) {
+        user.email = this.sanitizer.bypassSecurityTrustHtml(`<span class="${this.doesUserHaveAnActiveSession(user) ? 'confirmation' : 'error'}">${user.email}</span>`)
+        user.password = this.sanitizer.bypassSecurityTrustHtml(`<span class="${this.doesUserHaveAnActiveSession(user) ? 'confirmation' : 'error'}">${user.password}</span>`)
+      }
+      this.userDataSource = new MatTableDataSource(this.userDataSource)
+      this.userDataSource.paginator = this.paginatorUsers
+      this.resultsLengthUser = users.length
+    }, (err) => {
+      this.error = err
+      console.log(this.error)
+    })
+  }
   
   findAllFeedbacks () {
     this.feedbackService.find().subscribe((feedbacks) => {
