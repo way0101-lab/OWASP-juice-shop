@@ -24,7 +24,7 @@ jobs:
         
         ### SCANNING: Optional fields
         polaris_application_name: "Hari_JuiceShop"
-        polaris_project_name: "Test for Policies"
+        polaris_project_name: "Juice Shop Testing"
 
                 ### PULL REQUEST COMMENTS: Uncomment below to enable
         # polaris_prComment_enabled: true 
@@ -38,7 +38,7 @@ jobs:
         #polaris_test_sca_type: "SCA-SIGNATURE"
 
          ### SAST SCAN
-        polaris_test_sast_type: "SAST_RAPID"
+        polaris_test_sast_type: "SAST_FULL"
 
 
                 ### Mark build status if policy violating issues are found
