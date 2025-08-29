@@ -34,13 +34,7 @@ jobs:
         polaris_reports_sarif_create: true
         polaris_upload_sarif_report: true
         include_diagnostics: true
-    - name: Save Logs
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: bridge-logs
-        path: ${{ github.workspace }}/.bridge
-        include-hidden-files: true
+   
 
                 ### Signature scan
         #polaris_test_sca_type: "SCA-SIGNATURE"
@@ -58,3 +52,10 @@ jobs:
         #   run: |
         #     EXIT_CODE=${{ steps.polaris-scan.outputs.status }}
         #     echo "Polaris Scan exit status - $EXIT_CODE"
+    - name: Save Logs
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: bridge-logs
+        path: ${{ github.workspace }}/.bridge
+        include-hidden-files: true
