@@ -25,6 +25,7 @@ jobs:
         ### SCANNING: Optional fields
         polaris_application_name: "Hari_JuiceShop"
         polaris_project_name: "Juice Shop Testing"
+        polaris_test_sast_location: "local"
 
                 ### PULL REQUEST COMMENTS: Uncomment below to enable
         # polaris_prComment_enabled: true 
