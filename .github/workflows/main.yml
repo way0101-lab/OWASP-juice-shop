@@ -28,7 +28,7 @@ jobs:
         ### SCANNING: Optional fields
         polaris_application_name: "Hari_JuiceShop_LocalTest_Take2"
         polaris_project_name: "Juice Shop Testing Local_2"
-        polaris_test_sast_location: "remote"
+        polaris_test_sast_location: "local"
 
                 ### PULL REQUEST COMMENTS: Uncomment below to enable
         polaris_prComment_enabled: true 
@@ -45,7 +45,7 @@ jobs:
         #polaris_test_sca_type: "SCA-SIGNATURE"
 
          ### SAST SCAN
-        #polaris_test_sast_type: "SAST-RAPID"
+        polaris_test_sast_type: "SAST_FULL_ISSUE_UPLOAD"
 
 
                 ### Mark build status if policy violating issues are found
