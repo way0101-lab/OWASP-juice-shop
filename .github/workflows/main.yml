@@ -45,7 +45,7 @@ jobs:
         #polaris_test_sca_type: "SCA-SIGNATURE"
 
          ### SAST SCAN
-        polaris_test_sast_type: "SAST_FULL_ISSUE_UPLOAD"
+        #polaris_test_sast_type: "SAST_FULL_ISSUE_UPLOAD"
 
 
                 ### Mark build status if policy violating issues are found
