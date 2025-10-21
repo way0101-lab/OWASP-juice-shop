@@ -29,7 +29,7 @@ jobs:
         polaris_application_name: "Hari_JuiceShop_LocalTest_Take2"
         polaris_project_name: "Juice Shop Testing Local_2"
         # polaris_test_sast_type: "SAST-FULL"
-        polaris_test_sast_location: "local"
+        polaris_test_sast_location: "hybrid"
 
                 ### PULL REQUEST COMMENTS: Uncomment below to enable
         polaris_prComment_enabled: true 
